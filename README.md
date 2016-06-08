@@ -34,7 +34,7 @@ In a custom theme folder you should create a folder structure like this:
 - **[fonts]**:  any custom fonts you wish to use in your theme
 - **[overrides]**: when changing default $variables values is not sufficient enough, you can use the files inside this folder to override or add new css structures.
 - **_default.scss**: entry point for gulp-sass to do compilation. Remember that the filename should match the theme folder name.  Minimum required imports:
-```
+```sass
 @import "[theme-name]/variables/bootstrap";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "[theme-name]/overrides";
@@ -43,7 +43,7 @@ In a custom theme folder you should create a folder structure like this:
 
 Extract sections of **_bootstrap.scss** variables if decide to change $variables values.
 For example: if you decide to change the values of the default bootstrap colors
-```
+```sass
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -63,7 +63,7 @@ $gray-darker:            #999 !default;
 ```
 then you should extract the **colors** variables section into a separate file  with the filename matches the name of the variable section. In this case the filename should be **_colors.scss*. After that you can @import the colors in the __bootstrap.scss file like:
 
-```
+```sass
 $bootstrap-sass-asset-helper: false !default;
 //
 // Variables
@@ -78,7 +78,7 @@ $bootstrap-sass-asset-helper: false !default;
 Let's say you want to make a very fancy button, but the _bootstrap.scss variables lack options to do this. With that in mind you can start use to override stuffs like this:
 
 file: **[overrides]/_buttons.scss**
-```
+```sass
 @import "../variables/colors";
 @import "../variables/typography";
 @import "../variables/buttons";
