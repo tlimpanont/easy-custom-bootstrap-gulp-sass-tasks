@@ -1,0 +1,117 @@
+.cgc-notification-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.cgc-notification-icon:hover {
+  cursor: pointer;
+}
+
+.cgc-notification-icon.info circle {
+  fill: $blue-heaven;
+}
+
+.cgc-notification-icon.ok circle {
+  fill: $green;
+}
+
+.cgc-notification-icon.warn circle {
+  fill: $orange;
+}
+
+.cgc-notification-icon.err circle {
+  fill: $red;
+}
+
+.cgc-notification-icon-text {
+  font-size: 0.7em;
+  font-weight: bold;
+  fill: white;
+}
+
+.cgc-notification-title, .cgc-notification-title h4{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cgc-notification-title.info {
+  color: $blue-heaven;
+}
+
+.cgc-notification-title.ok {
+  color: $green;
+}
+
+.cgc-notification-title.warn {
+  color: $orange;
+}
+
+.cgc-notification-title.err {
+  color: $red;
+}
+
+.cgc-notification-icon-balloon {
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  opacity: 0;
+  display: none;
+  @include default-border();
+  @include default-shadow();
+  @include default-transition();
+}
+
+.cgc-notification-icon-balloon.active{
+  display: block;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.cgc-notification-icon-balloon.left {
+  margin-top: -42px;
+  margin-left: 34px;
+}
+
+.cgc-notification-arrow {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.cgc-notification-arrow.left{
+  left: -9px;
+  top: 21px;
+  @include custom-shadow(-2px -2px 5px 0 rgba(128,128,128,.1));
+  @include rotate(315deg);
+}
+
+.cgc-notification-arrow:after {
+  background: white;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  @include default-border;
+}
+.cgc-notification-content{
+  display: block;
+  white-space: nowrap;
+}
+
+.cgc-notification-content .table th{
+  border-bottom: 5px solid #FFF;
+  background-color: #EEE;
+  padding: 2px 8px;
+}
+
+.cgc-notification-content .table td{
+  padding: 0 8px;
+}
+.cgc-notification-content .table .table-subheader {
+  padding-top: 2px;
+}
+.cgc-notification-content .table .table-subheader-cell {
+  padding-left: 8px;
+}

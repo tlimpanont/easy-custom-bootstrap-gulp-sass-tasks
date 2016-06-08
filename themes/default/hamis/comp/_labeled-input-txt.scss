@@ -1,0 +1,35 @@
+.input-group {
+  position: relative;
+  padding-top: 15px;
+}
+
+label.adaptive-title {
+  color: $light-gray;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 18px;
+  @include default-transition();
+}
+
+.input-group input {
+  display: block;
+  background-color: white;
+  padding-left: 4px;
+  @include default-border;
+  @include border-radius(4px);
+}
+
+.input-group input:invalid ~ label.adaptive-title{
+
+}
+.input-group input:focus ~ label.adaptive-title,
+.input-group input:valid ~ label.adaptive-title {
+  top: -7px;
+  left: 1px;
+  color: $gray;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}

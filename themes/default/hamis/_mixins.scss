@@ -1,0 +1,49 @@
+//Generic mixins functions
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin default-transition() {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin default-border() {
+  border: 1px solid $light-gray;
+}
+
+@mixin default-border-radius() {
+  @include border-radius(2px);
+}
+
+@mixin custom-shadow($custom) {
+  -webkit-box-shadow: $custom;
+  -moz-box-shadow: $custom;
+  box-shadow: $custom;
+}
+
+@mixin default-shadow() {
+  @include custom-shadow(0 3px 10px 0 rgba(0,0,0,0.1));
+}

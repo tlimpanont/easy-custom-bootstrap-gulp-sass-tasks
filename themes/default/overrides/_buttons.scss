@@ -1,0 +1,41 @@
+@import "../variables/colors";
+@import "../variables/typography";
+@import "../variables/buttons";
+@import "../variables/font-faces";
+@import "animated-buttons";
+
+@mixin button-bg-hover($color) {
+  &:hover {
+    background: darken($color, 5%);
+  }
+}
+
+.btn {
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+
+  &.btn-primary, &.btn-default {
+    &:hover, &:active, &:focus {
+      background: #33a8de !important;
+    }
+  }
+
+  &.btn-secondary {
+    background: white;
+    border: 1px solid $light-gray;
+    color: $semi-gray;
+    @extend .semi-bold;
+    @include button-bg-hover(white);
+  }
+
+  &.btn-modal {
+    background: $blue-sea;
+    color: white;
+    @include button-bg-hover($blue-sea);
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../variables/font-faces";
+@import "../variables/colors";
+@import "../variables/form-states-and-alerts";
+
+.alert {
+  &.alert-danger, &.alert-warning {
+    &:before {
+      content: 'Let op: ';
+      @extend .semi-bold;
+    }
+  }
+}
+
+.alert {
+  &.alert-warning {
+    color: $brown;
+  }
+}
+
+.alert.alert-notification {
+  padding: 30px 20px;
+  position: fixed;
+  top: 10px; right: 10px;
+  z-index: 2;
+  &.alert-success {
+    color: $blue-sea;
+  }
+}

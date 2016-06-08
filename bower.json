@@ -1,0 +1,20 @@
+{
+  "name": "easy-custom-bootstrap-gulp-sass-tasks",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Theuy Limpanont <info@theuy.nl> (http://theuy.nl/)"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "awesome-bootstrap-checkbox": "^0.3.7"
+  }
+}

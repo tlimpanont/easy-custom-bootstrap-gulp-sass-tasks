@@ -1,0 +1,70 @@
+@import "../variables/colors";
+@import "../variables/font-faces";
+@import "../variables/form-states-and-alerts";
+
+.popover {
+  padding: 20px;
+  border-radius: 0;
+  margin-left: 20px !important;
+
+  .popover-title {
+    margin: 0;
+    padding: 0 0 5px 0;
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+  }
+  .popover-content {
+    padding: 0;
+  }
+
+  .popover-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    @extend .semi-bold;
+    color: $light-gray;
+    cursor: pointer;
+    font-size: larger;
+  }
+}
+
+.text-success + .popover {
+  .popover-title {
+    color: $state-success-text;
+    @extend .semi-bold;
+  }
+  .popover-content {
+    table th { color: $state-success-text; @extend .semi-bold;}
+  }
+}
+
+.text-warning + .popover {
+  .popover-title {
+    color: $state-warning-text;
+    @extend .semi-bold;
+  }
+  .popover-content {
+    table th { color: $state-warning-text; @extend .semi-bold; }
+  }
+}
+
+.text-info + .popover {
+  .popover-title {
+    color: $state-info-text;
+    @extend .semi-bold;
+  }
+  .popover-content {
+    table th { color: $state-info-text; @extend .semi-bold; }
+  }
+}
+
+.text-danger + .popover {
+  .popover-title {
+    color: $state-danger-text;
+    @extend .semi-bold;
+  }
+  .popover-content {
+    table th { color: $state-danger-text; @extend .semi-bold; }
+  }
+}

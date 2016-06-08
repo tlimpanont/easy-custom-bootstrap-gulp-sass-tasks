@@ -1,0 +1,86 @@
+//Bootstrap fixes, after bootstrap styling has loaded
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  border-top: 0;
+}
+
+.table > tbody > tr > td.table-subheader {
+  padding: 2px 8px;
+}
+
+.table > tbody > tr > td.table-subheader-cell {
+  padding: 2px 8px;
+}
+
+.btn {
+  @include default-border-radius;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity: 1;
+  background-color: $light-gray;
+  border-color: darken($light-gray, 15%);
+}
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+  background-color: $light-gray;
+  border-color: darken($light-gray, 15%);
+}
+
+//Bootstrap on generic components
+.cf-sw-dn-onoffswitch-label {
+  margin-bottom: 0;
+}
+
+.fixed {
+  width: 400px; /* the fixed width required */
+  float: left;
+}
+
+.form-control:focus {
+  @include custom-shadow(none);
+}
+
+.form-control {
+  @include default-border;
+  @include default-border-radius;
+  @include custom-shadow(none);
+}
+
+// NAV TABS
+.nav-tabs {
+  border-bottom: 1px solid #C1E5FF;
+  padding: 0 15px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  background-color: transparent;
+  cursor: default;
+  border: 0;
+  border-bottom: 6px solid #0092D6;
+}
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857;
+  color: #999;
+  font-weight: bold;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 6px solid transparent;
+  text-decoration: none;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #0092D6;
+}
+
+.nav-tabs>li>a:hover {
+  border-color: transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 6px solid #C1E5FF;
+  color: #C1E5FF;
+  transition: all ease 0.2s;
+}

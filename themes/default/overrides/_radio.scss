@@ -1,0 +1,65 @@
+@import "../variables/colors";
+@import "../variables/typography";
+
+.radio {
+  margin-top: -3px;
+}
+
+.radio label {
+  &:before {
+    background: white;
+    transition: background-color .2s ease-in;
+  }
+  &:after {
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 6px;
+    margin-left: -14px;
+    background: white;
+  }
+}
+
+.radio {
+  input[type="radio"] {
+    &:disabled, &:read-only {
+      & + label {
+        opacity: 1;
+        cursor: not-allowed;
+        &:before {
+          background: white;
+          cursor: not-allowed;
+        }
+        &:after {
+          cursor: not-allowed;
+        }
+      }
+    }
+    &:focus + label {
+      &:before {
+        outline: none;
+      }
+    }
+
+    &:checked:disabled, &:checked:read-only, &:disabled {
+      & + label {
+        &:before {
+          background: white;
+        }
+        &:after {
+          background-color: $semi-gray;
+        }
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background: $brand-primary;
+      }
+      &:after {
+        background-color: white;
+      }
+    }
+
+  }
+}

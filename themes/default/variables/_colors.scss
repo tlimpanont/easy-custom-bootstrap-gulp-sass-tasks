@@ -1,0 +1,51 @@
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+/** grays */
+$gray: #333333;
+$mid-gray: #666666;
+$semi-gray: #999999;
+$light-gray: #cccccc;
+$water-gray: #e9e9e9;
+
+/** blues, $state-info */
+$blue: #0a4691;
+$blue-heaven: #0092d6;
+$light-blue: #dceffd;
+$lighter-blue: #eef7fe;
+
+
+/** greens, $state-success */
+$blue-sea: #007e91;
+$light-blue-sea: #cce5e9;
+$green: #46be41;
+$green-light: #e2eed9;
+$lime-green: #cdcd00;
+$lime-green-light: #f2f2a9;
+$lime-green-lighter: #f9f9de;
+
+/** oranges and browns, $state-warning */
+$orange: #f39900;
+$orange-lighter: #fce5bf;
+$brown: #74490c;
+
+
+/** reds, $state-danger */
+$red: #e52d12;
+$red-danger: #fddddc;
+$pinky-updates: #be0874;
+
+
+$gray-base:              $semi-gray !default;
+$gray-darker:            $gray !default;
+$gray-dark:              $gray !default;
+$gray:                   $gray !default;
+$gray-light:             $semi-gray !default;
+$gray-lighter:           $light-gray !default;
+
+$brand-primary:         $blue-heaven !default;
+$brand-success:         $green !default;
+$brand-info:            $blue-heaven !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;

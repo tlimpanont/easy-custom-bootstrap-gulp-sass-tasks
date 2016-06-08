@@ -1,0 +1,173 @@
+@import "../variables/font-faces";
+@import "../variables/colors";
+@import "../variables/typography";
+@import "../variables/forms";
+@import "../variables/form-states-and-alerts";
+
+@mixin required-asterisk($top, $right) {
+  .required, & + .required {
+    &:before {
+      content: "*";
+    }
+    color: $state-danger-text;
+    position: absolute;
+    top: $top;
+    right: $right;
+    z-index: 5;
+  }
+}
+
+input[type="text"] {
+  @include required-asterisk(10px, 10px);
+}
+
+.form-control[disabled] {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  @extend .semi-bold;
+}
+
+.form-control[disabled] + .input-group-addon {
+  background: transparent;
+  border: none;
+}
+
+.form-horizontal {
+   .control-label {
+     font-weight: normal;
+     text-align: left;
+     padding-top: 3px;
+   }
+ }
+.form-horizontal {
+  .checkbox {
+    padding-top: 3px;
+  }
+}
+
+.form-group-md, .form-group-sm {
+  ::-webkit-input-placeholder {
+    color: $semi-gray;
+    @extend .semi-bold;
+    text-transform: uppercase;
+  }
+  .form-control {
+    font-size: $font-size-base;
+  }
+
+  .input-group-addon {
+    color: $semi-gray;
+    @include required-asterisk(10px, 50px);
+  }
+}
+
+.form-group-sm {
+
+  .input-group-addon {
+    color: $semi-gray;
+    @include required-asterisk(5px, 40px);
+  }
+}
+
+.form-group-lg {
+  position: relative;
+
+  &.input-group.input-group-lg .form-control {
+    border-radius: $input-border-radius 0 0 $input-border-radius;
+  }
+
+  .form-control {
+    color: $gray;
+    font-size: $font-size-base;
+    padding-left: 10px;
+    padding-top: 30px;
+    border-radius: $input-border-radius;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $light-gray;
+    font-style: italic;
+    font-size: $font-size-base;
+  }
+
+  label {
+    color: $semi-gray;
+    text-transform: uppercase;
+    @extend .semi-bold;
+    z-index: 5;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .glyphicon {
+    &.glyphicon-triangle-bottom, &.glyphicon-triangle-top {
+      display: inline-block;
+      position: absolute;
+      top: 55%;
+      right: 10px;
+    }
+  }
+
+  .input-group-addon {
+    color: $semi-gray;
+    @include required-asterisk(10px, 60px);
+  }
+}
+
+@mixin has-state-radius() {
+  .form-control {
+    border-radius: $input-border-radius $input-border-radius 0 0;
+  }
+}
+
+@mixin has-state-focus($state-color) {
+  .form-control  {
+    &:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $state-color;
+    }
+    border-color: $state-color;
+  }
+}
+
+.form-group {
+  &.has-error .alert {
+    background: $state-danger-bg;
+    color: $state-danger-text;
+    &:before {
+      content: "Let op: ";
+      @extend .semi-bold;
+    }
+  }
+
+  &.has-warning .alert {
+    background: $state-warning-bg;
+    color: $brown;
+    &:before {
+      content: "Let op: ";
+      @extend .semi-bold;
+    }
+  }
+
+  &.has-success .alert {
+    background: $state-success-bg;
+    color: $state-success-text;
+  }
+  &.has-error, &.has-warning, &.has-success {
+    @include has-state-radius();
+  }
+
+  &.has-error {
+    @include has-state-focus($red-danger);
+  }
+  &.has-warning {
+    @include has-state-focus($state-warning-bg);
+  }
+  &.has-success {
+    @include has-state-focus($state-success-bg);
+  }
+}
+
+

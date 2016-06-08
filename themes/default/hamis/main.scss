@@ -1,0 +1,17 @@
+$background: #FFFFFF;
+
+//The mixin functions
+@import "mixins";
+
+//Hamis theme
+@import "hamis";
+
+//Import components generic and functional
+//__Generic__
+@import "comp/labeled-checkbox";
+//@import "comp/labeled-input-txt";
+@import "comp/callout-icon";
+@import "comp/visit-overview";
+@import "comp/visit-timeline";
+
+@import "bootstrap-fixes";

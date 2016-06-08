@@ -1,0 +1,35 @@
+@import "../variables/colors";
+
+@mixin bg-text($name, $palette) {
+  .bg-#{$name} {
+    background-color: $palette;
+  }
+  .text-#{$name} {
+    color: $palette;
+  }
+}
+
+// palettes names
+@include bg-text('blue', $blue);
+@include bg-text('blue-heaven', $blue-heaven);
+@include bg-text('light-blue', $light-blue);
+@include bg-text('lighter-blue', $lighter-blue);
+@include bg-text('blue-sea', $blue-sea);
+
+@include bg-text('green', $green);
+@include bg-text('orange', $orange);
+@include bg-text('red', $red);
+@include bg-text('red-danger', $red-danger);
+@include bg-text('pinky-updates', $pinky-updates);
+
+@include bg-text('mid-gray', $mid-gray);
+@include bg-text('semi-gray', $semi-gray);
+@include bg-text('light-gray', $light-gray);
+
+@include bg-text('gray-base', $gray-base);
+@include bg-text('gray-darker', $gray-darker);
+@include bg-text('gray-dark', $gray-dark);
+@include bg-text('gray', $gray);
+@include bg-text('gray-light', $gray-light);
+@include bg-text('gray-lighter', $gray-lighter);
+@include bg-text('water-gray', $water-gray);

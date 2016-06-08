@@ -1,0 +1,69 @@
+@import "../variables/colors";
+@import "../variables/typography";
+
+
+.checkbox {
+  margin-top: -3px;
+}
+
+.checkbox label {
+
+  &:before {
+    background: white;
+    transition: background-color .2s ease-in;
+  }
+
+  &:after {
+    padding-left: 4px;
+    padding-top: 2px;
+    font-size: 9px;
+    margin-top: 1px;
+  }
+
+}
+
+.checkbox {
+  input[type="checkbox"] {
+
+    &:disabled, &:read-only {
+      & + label {
+        cursor: not-allowed;
+        &:before {
+          background: white;
+        }
+        &:after {
+          cursor: not-allowed;
+        }
+      }
+    }
+    &:focus + label {
+      &:before {
+        outline: none;
+      }
+    }
+
+    &:checked:disabled, &:checked:read-only, &:disabled  {
+      & + label {
+        opacity: 1;
+        &:before {
+          background: white;
+          border: 1px solid $light-gray;
+        }
+        &:after {
+          color: $semi-gray;
+        }
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background: $brand-primary;
+        border: none;
+        transition: background-color .2s ease-in;
+      }
+      &:after {
+        color: white;
+      }
+    }
+  }
+}

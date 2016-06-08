@@ -1,0 +1,125 @@
+//Common HaMIS Colors
+$blue: #0A4691;
+$blue-heaven: #0092D6;
+$green: #46BE41;
+$orange: #F39900;
+$red: #E52D12;
+$darker-gray: #333333;
+$dark-gray: #666666;
+$gray: #999999;
+$light-gray: #CCCCCC;
+$lighter-gray: #EEEEEE;
+$form-background-input: #DCEFFD;
+$form-background: #F5F8FF;
+
+//Default HaMIS styling. NO vendor fixes here
+html{
+  height: 100vh;
+}
+body {
+  background-color: $background;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.table-subheader{
+  position: relative;
+  font-weight: 600;
+}
+
+.table-subheader-cell{
+  position: relative;
+  left: 0.5em;
+}
+.headroom {
+  padding-top: 1em;
+}
+.hamis-form {
+  background-color: $form-background;
+  color: $dark-gray;
+
+  span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  label {
+    color: $darker-gray;
+  }
+
+  .checkbox {
+    label {
+      white-space: nowrap;
+    }
+  }
+
+  .label-danger {
+    color: $red;
+    background-color: transparent;
+  }
+
+  .label-warning {
+    color: $orange;
+    background-color: transparent;
+  }
+
+  input {
+    @include default-border;
+  }
+
+  .form-control {
+    padding: 2px 3px;
+    height: 1.7em;
+    text-overflow: ellipsis;
+  }
+
+  .form-title {
+    color: $blue-heaven;
+    margin-top: 1em;
+    display: block;
+    font-weight: bold;
+  }
+
+  section {
+    margin-bottom: 1.3em;
+  }
+
+  .hamis-form-input {
+    background-color: $form-background-input;
+    color: $darker-gray;
+  }
+  .form-divider{
+    border-top: 1px solid #C1E5FF;
+  }
+
+  .border-right {
+    border-right: 1px solid #C1E5FF;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #D5EDFF;
+  }
+  .border-bottom-dashed {
+    border-bottom: 1px dashed #D5EDFF;
+  }
+}
+
+.form-table {
+  display: table;
+}
+.form-row {
+  display: table-row;
+}
+.form-key{
+  display: table-cell;
+}
+.form-value{
+  display: table-cell;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .hamis-form span {
+    position: relative;
+  }
+}

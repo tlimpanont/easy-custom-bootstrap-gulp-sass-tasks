@@ -1,0 +1,126 @@
+.visit-timeline {
+  height: 165px;
+  padding: 0;
+  width: 100%;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  text {
+    text-align: center;
+  }
+  .text-origin {
+    fill: $gray;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .text-origin-sub {
+    fill: $light-gray;
+    font-weight: bold;
+  }
+
+  .timeline {
+    stroke: rgb(228, 228, 228);
+    stroke-width: 3;
+  }
+
+  .poi-node {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .node-info-line {
+    fill: $blue-heaven;
+  }
+
+  .node-info-line.at-poi {
+    fill: $green;
+  }
+
+  .node-info-line.departed {
+    fill: $gray;
+  }
+
+  .node-outer {
+    fill: rgba(0, 146, 214, 0.15);
+  }
+  .node-outer.at-poi {
+    fill: rgba(70, 190, 65, 0.15);
+  }
+  .node-outer.departed {
+    fill: rgba(153, 153, 153, 0.15);
+  }
+
+  .node-inner{
+    stroke: $blue-heaven;
+    stroke-width: 2;
+    fill: white;
+  }
+
+  .node-inner.at-poi {
+    stroke: $green;
+    fill: $green;
+  }
+
+  .node-inner.departed {
+    stroke: $gray;
+  }
+
+  path.node-inner.departed{
+    stroke-width: 0;
+    fill: $gray;
+  }
+
+  path.node-inner.at-poi{
+    stroke-width: 0;
+    fill: $green;
+  }
+
+  path.node-inner{
+    stroke-width: 0;
+    fill: $blue-heaven;
+  }
+
+  .text-date {
+    font-size: 0.8em;
+    fill: $gray;
+    font-weight: 500;
+  }
+
+  .text-date.departed {
+    font-size: 0.8em;
+    fill: $light-gray;
+  }
+
+  .text-info-main {
+    fill: $gray;
+    font-weight: bold;
+    font-size: 0.9em;
+
+  }
+  .text-info-main.departed {
+    fill: $light-gray;
+    font-weight: bold;
+  }
+
+  .unplanned {
+    stroke: $gray;
+  }
+
+  .lock{
+    fill: $blue-heaven;
+  }
+
+  .current-movement{
+       cursor: pointer;
+     }
+
+  .marker-outer{
+    fill: $green;
+  }
+  .marker-inner{
+    fill: white;
+  }
+}

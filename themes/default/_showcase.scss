@@ -1,0 +1,62 @@
+@import "variables/colors";
+
+@mixin palette($name, $palette) {
+
+  &.#{$name} {
+    background-color: $palette;
+  }
+}
+
+.palette-desc {
+  margin: 5px 0 5px 0;
+}
+
+.showcase-state {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.palette-tile {
+  width: 50px;
+  height: 50px;
+
+  /** grays */
+  @include palette('gray', $gray);
+  @include palette('mid-gray', $mid-gray);
+  @include palette('semi-gray', $semi-gray);
+  @include palette('light-gray', $light-gray);
+  @include palette('water-gray', $water-gray);
+
+  /** blues, $state-info */
+  @include palette('blue', $blue);
+  @include palette('blue-heaven', $blue-heaven);
+  @include palette('light-blue', $light-blue);
+  @include palette('lighter-blue', $lighter-blue);
+
+
+  /** greens, $state-success */
+  @include palette('blue-sea', $blue-sea);
+  @include palette('light-blue-sea', $light-blue-sea);
+  @include palette('green', $green);
+  @include palette('green-light', $green-light);
+  @include palette('lime-green', $lime-green);
+  @include palette('lime-green-light', $lime-green-light);
+  @include palette('lime-green-lighter', $lime-green-lighter);
+
+
+  /** oranges and browns, $state-warning */
+  @include palette('orange', $orange);
+  @include palette('orange-lighter', $orange-lighter);
+  @include palette('brown', $brown);
+
+
+  /** reds, $state-danger */
+  @include palette('red', $red);
+  @include palette('red-danger', $red-danger);
+  @include palette('pinky-updates', $pinky-updates);
+
+
+
+}
+
+

@@ -1,0 +1,61 @@
+@import "../variables/colors";
+
+$toggleButtonWidth: 30px;
+$toggleButtonHeight: $toggleButtonWidth;
+$toggleContainerWidth: $toggleButtonWidth * 2;
+$toggleContainerHeight: $toggleContainerWidth / 2;
+$toggleButtonRadius: $toggleButtonWidth / 2;
+$toggleContainerRadius: $toggleContainerHeight / 2;
+
+.toggle-switch input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.toggle-switch input[type="checkbox"] + .before-after {
+  cursor: pointer;
+  width: $toggleContainerWidth;
+  height: $toggleContainerHeight;
+  border-radius: $toggleContainerRadius;
+  display: block;
+  transition: all .3s ease-out;
+  transform: translateX(0);
+  position: relative;
+  background: white;
+  border: 1px solid $light-gray;
+  &::before {
+    box-shadow: 2px 1px 5px 0px rgba(50, 50, 50, 0.1);
+    border: 1px solid $light-gray;
+    width: $toggleButtonWidth;
+    height: $toggleButtonHeight;
+    border-radius: $toggleButtonRadius;
+    background: white;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    content: '';
+    transition: all .25s ease-out;
+  }
+}
+
+.toggle-switch input[type="checkbox"]:checked + .before-after:before {
+  transform: translateX($toggleButtonWidth);
+}
+
+.toggle-switch input[type="checkbox"]:checked + .before-after {
+  background-color: $brand-primary;
+}
+
+.toggle-switch input[type="checkbox"]:disabled + .before-after,
+.toggle-switch input[type="checkbox"]:read-only + .before-after {
+  cursor: default;
+  opacity: 0.6;
+  &::before {
+    box-shadow: none;
+  }
+}
+
+.toggle-switch input[type="checkbox"]:disabled:checked + .before-after,
+.toggle-switch input[type="checkbox"]:read-only:checked + .before-after {
+  opacity: 0.6;
+}
