@@ -1,4 +1,4 @@
-### How to add own bootstrap-sass to this existing project?
+### How to add own bootstrap-sass theme to this project?
 
 In the folder **themes** you see the all the theming folder. Each theme has a recognisable name like the names you can see on http://bootswatch.com/.
 This project has a **default** theme as a starting example.
@@ -52,7 +52,7 @@ $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default;
 ```
 to
-```
+```sass
 
 //== Colors
 //
@@ -137,7 +137,7 @@ Gulp will handle all the folders (non-recursively) as a theming folder. It will 
 npm run build.dev
 npm run build.prod
 ```
-Difference between **dev** and **prod** is that in productio mode the css will be minified using **cssnano**
+Difference between **dev** and **prod** is that the css in the production mode will be minified using **cssnano**
 
 The build also copy separate dist folders
 ```
